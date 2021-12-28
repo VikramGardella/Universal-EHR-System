@@ -18,6 +18,8 @@ namespace iHeal
             outcome = outc;
         }
 
+
+        //accessors
         public string getDate() { return dateOf; }
 
         public string getReason() { return reason; }
@@ -35,6 +37,15 @@ namespace iHeal
         public int getHeight() { return height; }
 
         public int getWeight() { return weight; }
+
+
+        //functions
+        public string printSummary(){
+            string answer = "";
+            return answer;
+
+
+        }
 
 
     }
