@@ -1,7 +1,7 @@
-﻿using AppKit;
+using AppKit;
 using System;
 using System.Collections.Generic;
-using System.Data.SQLite;
+//using System.Data.SQLite;
 
 namespace iHeal
 {
@@ -12,12 +12,13 @@ namespace iHeal
             NSApplication.Init();
             NSApplication.Main(args);
 
+            /*
             SQLiteConnection sqlite_conn;
             sqlite_conn = CreateConnection();
             CreateTable(sqlite_conn);
             InsertData(sqlite_conn);
             ReadData(sqlite_conn);
-
+            */
 
             //Console.WriteLine("Welcome to your iHeal Electronic Health Records System.\n");
 
@@ -39,12 +40,22 @@ namespace iHeal
             for (int i = 0; i < patList.Count; i++)
             {
                 patList[i].printAllPatientData();
-
+                /*
+                NSTableCellView toAdd = new NSTableCellView();
+                string toShow = patList[i].getLastName() + ", " + patList[i].getFirstName();
+                NSTextField txt = new NSTextField();
+                
+                //toAdd.TextField = txt;
+                //patientQueryReturn.Add(toAdd);
+                */
             }
+
+
 
 
         }
 
+        /*
         static SQLiteConnection CreateConnection()
         {
 
@@ -109,7 +120,7 @@ namespace iHeal
             }
             conn.Close();
         }
-
+        */
 
 
     }

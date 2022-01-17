@@ -38,6 +38,10 @@ namespace iHeal
 
 
         //Accessors
+        public string getFirstName() { return firstName; }
+
+        public string getLastName() { return lastName; }
+
         public int getID() { return patientID; }
 
         public int getHeight() { return heightInches; }
@@ -56,6 +60,10 @@ namespace iHeal
 
 
         //Mutators
+        public void setFirstName(string newFN) { firstName = newFN; }
+
+        public void setLastName(string newLN) { lastName = newLN; }
+
         public void setHeight(int newH) { heightInches = newH; }
 
         public void setWeight(int newW) { weightPounds = newW; }
@@ -125,6 +133,29 @@ namespace iHeal
             //dermaData.printSummary();
 
             Console.WriteLine("\n------------------------------\n\n");
+        }
+
+        public int convertInToCm() {
+            return (int)(2.54 * heightInches);
+
+        }
+
+        public int convertLbsToKg() {
+            return (int)(weightPounds / 2.2);
+        }
+
+        public int calculateAge() {
+            int age = 0;
+            //get system date here
+
+            //use patient member variables for DOB
+
+            //see if system data has surpassed month/day of current year
+            //if so: return (yearCurrent - yearDOB)
+            //else: return (yearCurrent - yearDOB - 1)
+
+            return (age);
+
         }
 
     }
